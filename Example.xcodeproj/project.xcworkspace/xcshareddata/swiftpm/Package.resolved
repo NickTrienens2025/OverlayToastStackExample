@@ -1,0 +1,15 @@
+{
+  "originHash" : "5511b51edfb6e9d6de2ed4b005b9bab3300ceba96afdda98296ea4a9d05ff81c",
+  "pins" : [
+    {
+      "identity" : "overlaytoaststack",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/NickTrienens2025/OverlayToastStack.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7addda5376bfcd7436fe19aa672ec48d81b81d92"
+      }
+    }
+  ],
+  "version" : 3
+}
