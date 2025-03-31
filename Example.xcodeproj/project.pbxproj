@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8044D3482D97A2600035D168 /* OverlayToastStack in Frameworks */ = {isa = PBXBuildFile; productRef = 8044D3472D97A2600035D168 /* OverlayToastStack */; };
+		8044D3F82D97A9970035D168 /* PreviewSnapshots in Frameworks */ = {isa = PBXBuildFile; productRef = 8044D3F72D97A9970035D168 /* PreviewSnapshots */; };
+		8044D3FA2D97A9970035D168 /* PreviewSnapshotsTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 8044D3F92D97A9970035D168 /* PreviewSnapshotsTesting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8044D3482D97A2600035D168 /* OverlayToastStack in Frameworks */,
+				8044D3F82D97A9970035D168 /* PreviewSnapshots in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8044D3FA2D97A9970035D168 /* PreviewSnapshotsTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +145,7 @@
 			name = Example;
 			packageProductDependencies = (
 				8044D3472D97A2600035D168 /* OverlayToastStack */,
+				8044D3F72D97A9970035D168 /* PreviewSnapshots */,
 			);
 			productName = Example;
 			productReference = 809D64DB2D89BCFB00B7AFE0 /* Example.app */;
@@ -165,6 +170,7 @@
 			);
 			name = ExampleTests;
 			packageProductDependencies = (
+				8044D3F92D97A9970035D168 /* PreviewSnapshotsTesting */,
 			);
 			productName = ExampleTests;
 			productReference = 809D64EB2D89BCFC00B7AFE0 /* ExampleTests.xctest */;
@@ -227,6 +233,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				8044D3462D97A2600035D168 /* XCRemoteSwiftPackageReference "OverlayToastStack" */,
+				8044D3F62D97A9970035D168 /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 809D64DC2D89BCFB00B7AFE0 /* Products */;
@@ -429,6 +436,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
+				DEVELOPMENT_TEAM = 69UX76ERZ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -458,6 +466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
+				DEVELOPMENT_TEAM = 69UX76ERZ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -597,6 +606,14 @@
 				kind = branch;
 			};
 		};
+		8044D3F62D97A9970035D168 /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/doordash-oss/swiftui-preview-snapshots.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -604,6 +621,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8044D3462D97A2600035D168 /* XCRemoteSwiftPackageReference "OverlayToastStack" */;
 			productName = OverlayToastStack;
+		};
+		8044D3F72D97A9970035D168 /* PreviewSnapshots */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8044D3F62D97A9970035D168 /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */;
+			productName = PreviewSnapshots;
+		};
+		8044D3F92D97A9970035D168 /* PreviewSnapshotsTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8044D3F62D97A9970035D168 /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */;
+			productName = PreviewSnapshotsTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

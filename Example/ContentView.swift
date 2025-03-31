@@ -7,6 +7,7 @@
 
 import SwiftUI
 import OverlayToastStack
+import PreviewSnapshots
 
 struct ContentView: View {
     let sot: OverlayToastStack
@@ -61,7 +62,7 @@ struct ContentView: View {
                                      Color.green
                                  }
                                  .frame(width: 50)
-                                 .frame(maxHeight: 120)
+                                 .frame(height: 100)
                                  .frame( alignment: .init(horizontal: .leading, vertical: .top))
                             
                         VStack(alignment: .leading, spacing: 2) {
@@ -89,4 +90,24 @@ struct ContentView: View {
 
 #Preview {
     ContentView(sot: OverlayToastStack())
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<PreviewState> {
+        PreviewSnapshots(
+            configurations: PreviewState.all(named: "Normal")
+                .map {  PreviewSnapshots.Configuration.init(name: "Layout\($0.name)", state: $0)  },
+            configure: { state in
+                
+                ContentView(sot: OverlayToastStack())
+                    .environment(\.colorScheme, state.colorScheme)
+                    .environment(\.dynamicTypeSize, state.dynamicFontSize)
+                
+            }
+        )
+    }
 }
