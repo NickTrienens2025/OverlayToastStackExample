@@ -11,11 +11,12 @@ import OverlayToastStack
 @main
 struct ExampleApp: App {
     let sot = OverlayToastStack()
+    
+    init() {} 
 
     var body: some Scene {
         WindowGroup {
             ContentView(sot: sot)
-                
         }
     }
 }
